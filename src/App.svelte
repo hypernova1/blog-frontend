@@ -1,7 +1,8 @@
 <script>
-  import PostList from './containers/PostList.svelte';
+  import Router from 'svelte-spa-router';
+  import routes from './routes'
+  import Header from './components/Header.svelte';
 </script>
-<svelte:head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</svelte:head>
-<PostList/>
+<Header />
+<Router {routes} />
+

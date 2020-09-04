@@ -13,13 +13,10 @@
     .then((res) => res.data)
     .then((data) => {
       posts.set(data);
-      posts.subscribe((value) => {
-        localPosts = value;
-      });
   });
 </script>
 <ul>
   {#each localPosts as post}
-    <Post post={post} />
+    <Post post={post}/>
   {/each}
 </ul>
